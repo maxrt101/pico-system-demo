@@ -178,13 +178,13 @@ struct Raycaster : App {
           {1, 0xF}
         );
 
-        pen(color, color, color, 255);
+        pen(color, color, color, 0xF);
         vline(x, cap<float>(ceiling, 1, screen_height), wall_height);
       }
     }
 
 #if USE_2D_MAP_RENDER
-    pen(128, 128, 255);
+    pen(0x8, 0x8, 0xF);
     for (int32_t y = 0; y < map.size(); ++y) {
       for (int32_t x = 0; x < map.size(); ++x) {
         if (map.get(x, y).type == TILE_WALL) {
@@ -193,7 +193,7 @@ struct Raycaster : App {
       }
     }
 
-    pen(0, 255, 0);
+    pen(0xF, 0, 0);
     pixel(player.position.x, player.position.y);
 #endif
   }
