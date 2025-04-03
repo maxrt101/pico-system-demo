@@ -98,13 +98,11 @@ struct Raycaster : App {
   Player player;
   Map<MAP_SIZE> map;
 
-  float mFov   = 3.14159f / 3.0f;
+  float mFov   = 3.14159f / 4.0f;
   float mDepth = 30.0f;
   float mStep  = 0.01f;
 
   void init() {
-    // map = Map<MAP_SIZE>::sampleMap();
-
     player.position.x = map.size() / 2;
     player.position.y = map.size() / 2;
   }
@@ -228,8 +226,8 @@ private:
 
     Vec2<double> intersection;
     Vec2<int> hit_tile;
-    float max_distance = 100.0f;
-    float distance = 0.0f;
+    float max_distance  = 100.0f;
+    float distance      = 0.0f;
     TileHit hit;
 
     while (!result.hit_wall && distance < max_distance) {
