@@ -1,8 +1,6 @@
 #include "picosystem.hpp"
 #include "loader/loader.h"
 
-// text("yulia is the best", x, y);
-
 using namespace picosystem;
 
 static Loader loader;
