@@ -26,12 +26,10 @@ void Loader::update(uint32_t tick) {
     }
 
     if (pressed(UP)) {
-      // updateChecked<int32_t>(app_idx, -1, {0, (int32_t) apps.size - 1});
       app_idx = cap<int32_t>(app_idx - 1, 0, apps.size - 1);
     }
 
     if (pressed(DOWN)) {
-      // updateChecked<int32_t>(app_idx, 1, {0, (int32_t) apps.size - 1});
       app_idx = cap<int32_t>(app_idx + 1, 0, apps.size - 1);
     }
 

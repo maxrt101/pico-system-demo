@@ -24,15 +24,3 @@ template <typename T, typename R = T>
 R scale(T value, Vec2<T> val_constraints, Vec2<R> res_constraints) {
   return ((value - val_constraints.x) / (val_constraints.y - val_constraints.x)) * (res_constraints.y - res_constraints.x) + res_constraints.x;
 }
-
-// template <typename T>
-// void updateChecked(T& val, T upd, Vec2<T> constraints) {
-//   if (val + upd < constraints.x) {
-//     val = constraints.x;
-//   } else if (val + upd > constraints.y) {
-//     val = constraints.y;
-//   } else {
-//     val += upd;
-//   }
-// }
-
