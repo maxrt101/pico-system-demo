@@ -1,0 +1,9 @@
+cmake-*
+.idea
+.DS_Store
+*.o
+*.a
+*.so
+*.elf
+*.uf2
+*.map
