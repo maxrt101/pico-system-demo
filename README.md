@@ -25,7 +25,7 @@ Allows for drawing hollow and filled rectangles and elipses.
 Use `UP`/`DOWN`/`LEFT`/`RIGHT` to move cursor.  
 Press `B` to save starting point of next figure.  
 Press `B` when ready to draw and shape will be blitted onto the screen.  
-Press `X` to see current drawwing mode (first letter - Draw/Erase, second letter Rectangle/FilledRectange/Elipse/FilledElipse).  
+Press `X` to see current drawwing mode (first letter - Draw/Erase, second letter Line/Rectangle/FilledRectange/Elipse/FilledElipse).  
 Press `A` to change draw/erase mode.  
 Press `Y` to change shape.  
 

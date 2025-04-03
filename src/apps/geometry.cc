@@ -12,7 +12,7 @@ struct Geometry : App {
 
   enum {IDLE, CLICKED, DONE} state;
   enum {DRAW, ERASE} action_state;
-  enum {RECT, FRECT, ELIPSIS, FELIPSIS} figure;
+  enum {LINE, RECT, FRECT, ELIPSIS, FELIPSIS} figure;
 
   buffer_t buf;
   color_t data[SCREEN_SIZE * SCREEN_SIZE];
@@ -33,7 +33,7 @@ struct Geometry : App {
     clicked_pos = {0, 0};
     state = IDLE;
     action_state = DRAW;
-    figure = RECT;
+    figure = LINE;
     flags.value = 0;
 
     if (!buf.data) {
@@ -113,6 +113,9 @@ private:
 
   void cycle_figure() {
     switch (figure) {
+      case LINE:
+        figure = RECT;
+        break;
       case RECT:
         figure = FRECT;
         break;
@@ -124,13 +127,16 @@ private:
         break;
       case FELIPSIS:
       default:
-        figure = RECT;
+        figure = LINE;
         break;
     }
   }
 
   void draw_figure() {
     switch (figure) {
+      case LINE:
+        line(clicked_pos.x, clicked_pos.y, pos.x, pos.y);
+        break;
       case RECT:
         case FRECT:
         (figure == FRECT ? frect : rect)(
@@ -167,6 +173,8 @@ private:
 
   std::string figure_to_str() const {
     switch (figure) {
+      case LINE:
+        return "L";
       case RECT:
         return "R";
       case FRECT:
