@@ -1,0 +1,6 @@
+[submodule "vendor/pico-sdk"]
+	path = vendor/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
+[submodule "vendor/picosystem"]
+	path = vendor/picosystem
+	url = https://github.com/pimoroni/picosystem.git
