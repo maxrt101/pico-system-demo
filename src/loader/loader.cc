@@ -81,7 +81,7 @@ void Loader::draw_apps() {
     if (app_idx == i) {
       pen(0x8, 0xF, 0x8);
     }
-    text( std::string(apps.buffer[i].name) + "\n");
+    text(std::string(apps.buffer[i].name) + "\n");
     if (app_idx == i) {
       pen(0xF, 0xF, 0xF);
     }
